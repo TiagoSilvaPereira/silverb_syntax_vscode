@@ -1,0 +1,26 @@
+{
+    "name": "silverb",
+    "displayName": "SilverB",
+    "description": "SilverB Syntax",
+    "version": "0.0.1",
+    "publisher": "KingOfCode",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "silverb",
+            "aliases": ["Silver Bullet", "silverb"],
+            "extensions": [".silverb"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "silverb",
+            "scopeName": "source.silverb",
+            "path": "./syntaxes/silverb.tmLanguage.json"
+        }]
+    }
+}

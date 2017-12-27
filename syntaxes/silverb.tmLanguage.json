@@ -1,0 +1,53 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Silver Bullet",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"comments": {
+			"name": "comment.block.silverb",
+			"begin": "<%#",
+			"end": "#%>"
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.silverb",
+				"match": "\\b(if|for|else|switch|case|break)\\b"
+			},
+			{
+				"name": "keyword.other.silverb",
+				"match": "((<%)([^#])|([^#])(%>))"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "variable.language.silverb",
+				"match": "(this|var)"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.silverb",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.silverb",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.silverb"
+}
