@@ -32,7 +32,7 @@
 			},
 			{
 				"name": "keyword.operator.silverb",
-				"match": "((<$)|($>))"
+				"match": "((<\\$)|(\\$>))"
 			}]
 		},
 		"variables": {
