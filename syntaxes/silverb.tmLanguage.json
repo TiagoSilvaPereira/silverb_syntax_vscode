@@ -29,6 +29,10 @@
 			{
 				"name": "keyword.other.silverb",
 				"match": "((<%)([^#])|([^#])(%>))"
+			},
+			{
+				"name": "keyword.operator.silverb",
+				"match": "((<$)|($>))"
 			}]
 		},
 		"variables": {
