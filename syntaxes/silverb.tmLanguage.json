@@ -18,17 +18,17 @@
 	"repository": {
 		"comments": {
 			"name": "comment.block.silverb",
-			"begin": "<%#",
-			"end": "#%>"
+			"begin": "<#",
+			"end": "#>"
 		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.silverb",
-				"match": "\\b(if|for|else|switch|case|break)\\b"
+				"match": "\\b(if|for|else|switch|case|break|in|of|console.log)\\b(?=((.*)(%>))|((.*)(up>))|((.*)($>)))"
 			},
 			{
 				"name": "keyword.other.silverb",
-				"match": "((<%)([^#])|([^#])(%>))"
+				"match": "((<%)([^#])|([^#])(%>)|(<up)([^#])|([^#])(up>))"
 			},
 			{
 				"name": "keyword.operator.silverb",
@@ -38,7 +38,7 @@
 		"variables": {
 			"patterns": [{
 				"name": "variable.language.silverb",
-				"match": "(this|var)"
+				"match": "(this|var|let)(?=((.*)(%>))|((.*)(up>))|((.*)(\\$>)))"
 			}]
 		},
 		"strings": {
