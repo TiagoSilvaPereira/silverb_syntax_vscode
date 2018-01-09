@@ -42,13 +42,10 @@
 			}]
 		},
 		"strings": {
-			"name": "string.quoted.double.silverb",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.silverb",
-					"match": "\\\\."
+					"name": "string.quoted.double.silverb",
+					"match": "(\")([^\"])(\\w*)(\")(?=((.*)(%>))|((.*)(up>))|((.*)($>)))"
 				}
 			]
 		}
